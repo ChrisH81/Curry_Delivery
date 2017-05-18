@@ -23,4 +23,13 @@ class Menu
       puts "#{curry.number} - #{curry.name} - #{curry.ingredients}"
     end
   end
+
+  def make_choice
+    puts "\n"
+    print "Which curry would you like?"
+    curry_number = gets.chomp.to_i
+    @curries.find { |curry| curry.number == curry_number }
+    puts "\n"
+  end
+
 end
