@@ -1,4 +1,8 @@
+require_relative "menu.rb"
+
 done = false
+
+menu = Menu.new
 
 puts "Hello and welcome to the Plaza Curry House!"
 
@@ -12,7 +16,11 @@ while not done
 
   case choice
     when 1
-      puts "Great. Here is the menu:"
+      puts "\n"
+      puts "Great. Here is our menu"
+      puts "\n"
+      menu.print
+      puts "\n"
     when 2
       done = true
     else
